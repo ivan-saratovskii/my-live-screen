@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Stream</title>
+    <style>body { margin: 0; background: #222; text-align: center; } img { max-width: 100%; height: auto; }</style>
+</head>
+<body>
+    <img id="screen" src="screen.jpg" alt="Ожидание трансляции...">
+    <script>
+        const img = document.getElementById('screen');
+        // Обновляем картинку каждые 3 секунды
+        setInterval(() => {
+            img.src = 'screen.jpg?t=' + Date.now();
+        }, 3000);
+    </script>
+</body>
+</html>
